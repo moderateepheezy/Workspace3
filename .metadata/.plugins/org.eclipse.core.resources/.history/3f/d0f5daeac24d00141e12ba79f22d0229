@@ -1,0 +1,14 @@
+package Arrays;
+
+public class OrdArray {
+	private double[] a;
+	private int nElems;
+	
+	public OrdArray(int max){
+		nElems = 0;
+	}
+	
+	public int size(){
+		return nElems;
+	}
+}

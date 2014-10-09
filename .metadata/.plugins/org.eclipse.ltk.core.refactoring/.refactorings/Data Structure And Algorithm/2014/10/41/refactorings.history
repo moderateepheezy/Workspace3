@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;UseOfString.java&apos; to &apos;Data Structure And Algorithm/src/Arrays&apos;&#x0A;- Original project: &apos;Data Structure And Algorithm&apos;&#x0A;- Destination element: &apos;Data Structure And Algorithm/src/Arrays&apos;&#x0A;- Original element: &apos;UseOfString.java&apos;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;Arrays" element1="/src&lt;{UseOfString.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1412632293018" units="1" version="1.0"/>
+</session>

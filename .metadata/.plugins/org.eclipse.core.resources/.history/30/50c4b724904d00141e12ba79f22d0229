@@ -1,0 +1,27 @@
+import java.io.IOException;
+
+
+public class UseOfString {
+
+	/**
+	 * @param args
+	 */
+	
+	public double getDouble() throws IOException{
+		String s = getString();
+		Double aDub = Double.valueOf(s);
+		return aDub.doubleValue();
+	}
+	private String getString() throws IOException{
+		String s = "";
+		int ch;
+		while( (ch=System.in.read()) != -1 && (char)ch != '\n' )
+		s += (char)ch;
+		return s;
+	}
+	public static void main(String[] args) {
+		UseOfString us = new UseOfString();
+		us.getDouble();
+	}
+
+}

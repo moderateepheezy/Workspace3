@@ -1,0 +1,12 @@
+package Arrays;
+
+public class LowArrayApp {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="android.util.Log"/>
+<fullyQualifiedTypeName name="com.cchub.cityguide.DataPreparation"/>
+<fullyQualifiedTypeName name="UseOfString"/>
+<fullyQualifiedTypeName name="Arrays.LowArray"/>
+<fullyQualifiedTypeName name="Arrays.HighArray"/>
+<fullyQualifiedTypeName name="Arrays.OrdArray"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
+<fullyQualifiedTypeName name="android.widget.RadioGroup"/>
+<fullyQualifiedTypeName name="android.widget.EditText"/>
+<fullyQualifiedTypeName name="android.widget.ArrayAdapter"/>
+<fullyQualifiedTypeName name="android.R"/>
+<fullyQualifiedTypeName name="android.R.layout"/>
+<fullyQualifiedTypeName name="com.example.foodtrip.FoodTrip"/>
+<fullyQualifiedTypeName name="com.example.foodtrip.R.layout"/>
+<fullyQualifiedTypeName name="com.example.foodtrip.Restaurant"/>
+<fullyQualifiedTypeName name="com.example.foodtrip.R.id"/>
+<fullyQualifiedTypeName name="android.view.LayoutInflater"/>
+<fullyQualifiedTypeName name="com.example.foodtrip.R.drawable"/>
+<fullyQualifiedTypeName name="com.example.foodtrip.FoodTrip.PlaceholderFragment"/>
+</qualifiedTypeNameHistroy>

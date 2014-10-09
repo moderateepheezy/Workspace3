@@ -1,0 +1,154 @@
+package com.cchub.cityguide;
+
+import java.util.ArrayList;
+
+public class DataPreparation {
+	private ArrayList<Parent> prepareListData() {
+		// TODO Auto-generated method stub
+		listDataHeader = new ArrayList<Parent>();
+
+		// Creating a Parent class object
+		for (int i = 1; i < 7; i++) {
+			final Parent parent = new Parent();
+			// Set value in parent
+			// String[] x = {"a", "b", "c"};
+			if (i == 1) {
+				parent.setText("Prefrence");
+				parent.setIcon(R.drawable.favourite1);
+				parent.setChildren(new ArrayList<Child>());
+
+			} else if (i == 2) {
+				parent.setText("Business");
+				parent.setIcon(R.drawable.bb);
+				parent.setChildren(new ArrayList<Child>());
+
+				// Set Child value
+				final Child child = new Child();
+				child.setChildText("Services");
+				child.setChildIcon(R.drawable.ic_launcher);
+				String[] f = { "Advertising Agencies", "Business Centers",
+						"Bribal", "Cyber Cafe", "Catering", "Event Decoration",
+						"Garden and LanScaping", "Website Designing" };
+				int[] id2= {431, 463, 123, 465, 265, 623, 326, 134};
+				child.setContent(f);
+				child.setContentID(id2);
+				parent.getChildren().add(child);
+
+				// Set Second Child
+				final Child child1 = new Child();
+				child1.setChildText("Products");
+				child1.setChildIcon(R.drawable.ic_launcher);
+				String[] p = { "Auto Spare Parts", "Boutiques",
+						"Carpet and Rug Dealer", "Computer Software Dealers",
+						"Bakery", "Furniture and Fitting", "Generator Dealers",
+						"Gift Shop", "Home Accesories", "Home Furnishing",
+						"Inverter Dealers", "Laboratory Equipment Dealers",
+						"Livestock", "Mobile Phone Accesories",
+						"Office Furniture", "Provision Store",
+						"Sports Equipment", "Stationery Stores",
+						"Textile Dealers", "Building Material Dealers", "Cement Dealers" };
+				int[] id ={
+						107, 115, 304, 133, 262, 308, 183, 540, 309, 310, 
+						185, 238, 93, 938, 403, 548, 1210, 550, 121, 139, 141
+						};
+				child1.setContent(p);
+				child1.setContentID(id);
+				parent.getChildren().add(child1);
+			} else if (i == 3) {
+				parent.setText("Fun and Relaxation");
+				parent.setIcon(R.drawable.funny);
+				parent.setChildren(new ArrayList<Child>());
+
+				// Set Child value
+				final Child child = new Child();
+				child.setChildText("Bar");
+				int barID = 263;
+				child.setChildID(barID);
+				parent.getChildren().add(child);
+
+				// Set Second Child
+				final Child child1 = new Child();
+				child1.setChildText("Fast Food joint");
+				int fastFoodID = 267;
+				child1.setChildID(fastFoodID);
+				parent.getChildren().add(child1);
+			} else if (i == 4) {
+				parent.setText("Artisans");
+				parent.setIcon(R.drawable.workers);
+				parent.setChildren(new ArrayList<Child>());
+
+				// Set Child value
+				final Child child = new Child();
+				child.setChildText("Aluminum Fabricator");
+				int aluminumID = 962;
+				child.setChildID(aluminumID);
+				parent.getChildren().add(child);
+
+				// Set Second Child
+				final Child child1 = new Child();
+				child1.setChildText("Capenter");
+				int capenterID = 320;
+				child1.setChildID(capenterID);
+				parent.getChildren().add(child1);
+
+				// Set Second Child
+				final Child child2 = new Child();
+				child2.setChildText("Electrician");
+				int electID = 323;
+				child2.setChildID(electID);
+				parent.getChildren().add(child2);
+
+				// Set Second Child
+				final Child child3 = new Child();
+				child3.setChildText("Fashoin Designer");
+				int fashionID = 244;
+				child3.setChildID(fashionID);
+				parent.getChildren().add(child3);
+
+				// Set Second Child
+				final Child child4 = new Child();
+				child4.setChildText("Graphics Designer");
+				int graphicsID = 655;
+				child4.setChildID(graphicsID);
+				parent.getChildren().add(child4);
+
+				// Set Second Child
+				final Child child5 = new Child();
+				child5.setChildText("Interior Designer");
+				int interiorID = 327;
+				child5.setChildID(interiorID);
+				parent.getChildren().add(child5);
+			} else if (i == 5) {
+				parent.setText("School");
+				parent.setIcon(R.drawable.dd);
+				parent.setChildren(new ArrayList<Child>());
+
+				// Set Child value
+				final Child child = new Child();
+				child.setChildText("Primary School");
+				int primarySchoolID = 166;
+				child.setChildID(primarySchoolID);
+				parent.getChildren().add(child);
+
+				// Set Second Child
+				final Child child1 = new Child();
+				child1.setChildText("Secondary School");
+				int secondarySchoolID = 168;
+				child1.setChildID(secondarySchoolID);
+				parent.getChildren().add(child1);
+			} else if (i == 6) {
+				parent.setText("Others");
+				parent.setIcon(R.drawable.others);
+				parent.setChildren(new ArrayList<Child>());
+
+				final Child child6 = new Child();
+				child6.setChildText("Church");
+				int churchID = 515;
+				child6.setChildID(churchID);
+				parent.getChildren().add(child6);
+			}
+			listDataHeader.add(parent);
+		}
+		return listDataHeader;
+	}
+}
