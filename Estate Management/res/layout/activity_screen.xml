@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <!-- Sample Dashboard screen with two buttons -->
+    <Button 
+        android:id="@+id/btnViewProducts"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="All Property"
+        android:layout_marginTop="25dp"/>
+    
+    <Button 
+        android:id="@+id/btnAdd"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Ad New Property"
+        android:layout_marginTop="25dp"/>
+    
+    <Button 
+        android:id="@+id/btnContact"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact Us"
+        android:layout_marginTop="25dp"/>
+    
+    <Button 
+        android:id="@+id/btnlogout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:layout_marginTop="25dp"/>
+
+</LinearLayout>

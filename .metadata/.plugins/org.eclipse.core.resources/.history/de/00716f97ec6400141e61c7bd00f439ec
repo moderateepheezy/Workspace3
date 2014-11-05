@@ -1,0 +1,103 @@
+package com.example.dragndropdemo;
+
+import android.content.ClipData;
+import android.content.ClipDescription;
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
+import android.view.DragEvent;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.DragShadowBuilder;
+import android.view.View.OnDragListener;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+
+public class MainActivity extends ActionBarActivity {
+	ImageView ima;
+	private static final String IMAGE_VIEW_TAG = "Android Logo";
+	String msg;
+	private android.widget.RelativeLayout.LayoutParams layoutParams;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		ima = (ImageView)findViewById(R.id.iv_logo);
+		//Set the image Tag
+		ima.setTag(IMAGE_VIEW_TAG);
+		
+		ima.setOnLongClickListener(new View.OnLongClickListener() {
+			
+			@Override
+			public boolean onLongClick(View v) {
+				ClipData.Item item = new ClipData.Item((CharSequence)v.getTag());
+				
+				String[] mimeTypes = {ClipDescription.MIMETYPE_TEXT_PLAIN};
+				ClipData dragData  = new ClipData(v.getTag().toString(), mimeTypes, item);
+				//Instatiate the drag shadow builder
+				View.DragShadowBuilder myShadow = new DragShadowBuilder(ima);
+				
+				//Start the drag
+				v.startDrag(dragData //the data to be dragged
+						, myShadow, //the drag shadow builder
+						null, //no need to use local data
+						0); //flags(not currently use set to 0)
+				return true;
+			}
+		});
+		
+		ima.setOnDragListener(new OnDragListener() {
+			
+			@Override
+			public boolean onDrag(View v, DragEvent event) {
+				switch(event.getAction()){
+				case DragEvent.ACTION_DRAG_STARTED:
+					layoutParams = (RelativeLayout.LayoutParams);
+					v.getLayoutParams();
+					Log.d(msg, "Action is DragEvent.ACTION_DRAG_STARTED");
+					break;
+				case DragEvent.ACTION_DRAG_ENTERED:
+					Log.d(msg, "Action is DragEvent.ACTION_DRAG_ENTERED");
+					int x_cord = (int) event.getX();
+					int y_cord = (int) event.getY();
+					break;
+				case DragEvent.ACTION_DRAG_EXITED:
+					Log.d(msg, "Action is DragEvent.ACTION_DRAG_EXIT");
+					 x_cord = (int) event.getX();
+					 y_cord = (int) event.getY();
+					 layoutParams.leftMargin = x_cord;
+					 layoutParams.rightMargin = y_cord;
+					 v.setLayoutParams(layoutParams);
+					break;
+				case DragEvent.ACTION_DRAG_LOCATION:
+					Log.d(msg, "Action is DragEvent.ACTION_DRAG_LOCATION");
+					 x_cord = (int) event.getX();
+					 y_cord = (int) event.getY();
+				}
+				return false;
+			}
+		});
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+}

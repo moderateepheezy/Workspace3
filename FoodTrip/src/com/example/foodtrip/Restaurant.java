@@ -2,8 +2,10 @@ package com.example.foodtrip;
 
 public class Restaurant {
 
-		private String name = "";
-		private String address = "";
+		private String name;
+		private String address;
+		public int image;
+		private String type;
 
 		public String getName() {
 			return (name);
@@ -20,15 +22,13 @@ public class Restaurant {
 		public void setAddress(String address) {
 			this.address = address;
 		}
-		
-		private String type = "";
 
 		public String getType() {
 			return (type);
 		}
 
-		public void setType(String type) {
-			this.type = type;
+		public void setType(String types) {
+			type = types;
 		}
 		
 		@Override
@@ -36,6 +36,16 @@ public class Restaurant {
 		public String toString() {
 			return getName()+ " , " + getAddress()	+ " , " + getType();
 
+		}
+
+		public Restaurant(String name, String address, int image, String type) {
+			this.name = name;
+			this.address = address;
+			this.image = image;
+			this.type = type;
+		}
+
+		public Restaurant() {
 		}
 
 }

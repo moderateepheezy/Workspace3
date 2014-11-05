@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Android Quiz</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="label_class">Class No.</string>
+    <string name="label_class_date">Class Date.</string>
+    <string name="label_class_time">Class Time.</string>
+    <string name="button_add_batch">Add New Batch"</string>
+    
+    <string name="label_course_code">code</string>
+    <string name="label_course">Course</string>
+    <string name="label_start_date">Start Date</string>
+    <string name="label_show_date">2012-04-24</string>
+    <string name="label_start_time">Start Time</string>
+    <string name="label_show_time">19:00</string>
+    
+    <string name="label_number_of_class">No. Classes</string>
+    <string name="label_class_per_week">Class Per Week</string>
+    <string name="label_class_period">Period(Min)</string>
+    <string name="label_remark">Remarks</string>
+    
+    <string name="btnAdd">Add Batch</string>
+    <string name="label_end_time">End Date</string>
+
+</resources>

@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.simpumind.estatemanagement.MessageActivity" >
+    
+    <!-- Name label -->
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Full Name:"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:textSize="17dp"/>
+    
+    <!-- Input name -->
+    <EditText 
+        android:id="@+id/inputfname"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="15dp"
+        android:singleLine="true"/>
+
+    <!-- Email label -->
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:textSize="17dp"/>
+    
+    <!-- Input Email -->
+    <EditText 
+        android:id="@+id/inputemail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="15dp"
+        android:singleLine="true"
+        android:inputType="textEmailAddress"/>
+    
+    <!-- Email Description label -->
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Message"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:textSize="17dp"/>
+    
+    <!-- Input email -->
+    <EditText 
+        android:id="@+id/inputmessage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="15dp"
+        android:lines="4"/>
+</LinearLayout>

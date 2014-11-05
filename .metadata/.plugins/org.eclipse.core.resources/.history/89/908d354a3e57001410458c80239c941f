@@ -1,0 +1,16 @@
+package com.example.chatapp;
+
+import com.parse.Parse;
+
+import android.app.Application;
+
+public class MyApplication extends Application{
+	
+	@Override
+	public void onCreate() {
+		// TODO Auto-generated method stub
+		super.onCreate();
+		Parse.initialize(this, "zhvlLiBXIyFCSUew9PDGqSKHpAssCznklweTrhDA", 
+				"APzCo9UrNMFkbWs0ez4RmA8xaQZrDdreS6iBXetU");
+	}
+}

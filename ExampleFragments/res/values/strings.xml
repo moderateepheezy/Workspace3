@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ExampleFragments</string>
+    <string name="fragnew">This is the View for the NewFragment Class</string>
+    <string name="action_settings">Settings</string>
+    <string name="fragmain">This is the Fragment for the PlaceHolderFragment class.</string>
+	<string name="okButton">OK Button.</string>
+	<string name="notOk">Not OK Button.</string>
+	<string name="hintMessage">Enter a message here.</string>
+	<string name="showAlertDialog">Show Alert Dialog</string>
+	<string name="showProgressDialog">Show Progress Dialog</string>
+    
+</resources>

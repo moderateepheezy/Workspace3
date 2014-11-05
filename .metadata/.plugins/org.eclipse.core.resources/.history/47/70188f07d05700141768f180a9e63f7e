@@ -1,0 +1,169 @@
+package com.example.chatapp;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.ProgressDialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.Bundle;
+import android.support.v4.content.LocalBroadcastManager;
+import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import com.parse.FindCallback;
+import com.parse.ParseException;
+import com.parse.ParseQuery;
+import com.parse.ParseUser;
+
+public class ListUserActivity extends ActionBarActivity {
+
+	private String currentId;
+	private ArrayList<String> name;
+	private ListView userListView;
+	private ArrayAdapter<String> namesArrayAdapter;
+
+	ProgressDialog pDialog;
+	BroadcastReceiver reciever;
+	
+	Button logoutButton;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_list_user);
+		showSpinner();
+		//setConversationList();
+		
+		/*logoutButton = (Button)findViewById(R.id.logoutButton);
+		logoutButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View view) {
+				stopService(new Intent(getApplicationContext(), MessageService.class));
+				ParseUser.logOut();
+				Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+				startActivity(intent);
+			}
+		});*/
+	}
+
+	public void openConversation(ArrayList<String> names, int pos) {
+		ParseQuery<ParseUser> query = ParseUser.getQuery();
+		query.whereEqualTo("username", name.get(pos));
+		query.findInBackground(new FindCallback<ParseUser>() {
+
+			@Override
+			public void done(List<ParseUser> user, ParseException e) {
+				if (e == null) {
+					Intent intent = new Intent(getApplicationContext(),
+							MessagingActivity.class);
+					intent.putExtra("RECIPIENT_ID", user.get(0).getObjectId());
+					startActivity(intent);
+				} else {
+					Toast.makeText(getApplicationContext(),
+							"error finding user", Toast.LENGTH_LONG).show();
+				}
+			}
+		});
+	}
+
+	public void showSpinner() {
+		pDialog = new ProgressDialog(this);
+		pDialog.setTitle("Loading");
+		pDialog.setMessage("Please wait...");
+		pDialog.show();
+
+		reciever = new BroadcastReceiver() {
+
+			@Override
+			public void onReceive(Context context, Intent intent) {
+				Boolean success = intent.getBooleanExtra("success", false);
+				pDialog.dismiss();
+				if (!success) {
+					Toast.makeText(getApplicationContext(),
+							"Message service failed to start",
+							Toast.LENGTH_LONG).show();
+				}
+			}
+		};
+		LocalBroadcastManager.getInstance(this).registerReceiver(reciever,
+				new IntentFilter("com.example.chatapp.ListUserActivity"));
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.list_user, menu);
+		return true;
+	}
+
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		setConversationList();
+		super.onResume();
+	}
+
+	private void setConversationList() {
+		currentId = ParseUser.getCurrentUser().getObjectId();
+		name = new ArrayList<String>();
+
+		ParseQuery<ParseUser> query = ParseUser.getQuery();
+		// don't include your self
+		query.whereNotEqualTo("objectId", currentId);
+		query.findInBackground(new FindCallback<ParseUser>() {
+
+			@Override
+			public void done(List<ParseUser> userList, ParseException e) {
+				if (e == null) {
+					for (int i = 0; i < userList.size(); i++) {
+						name.add(userList.get(i).getUsername().toString());
+					}
+					userListView = (ListView) findViewById(R.id.userListView);
+					namesArrayAdapter = new ArrayAdapter<String>(
+							getApplicationContext(), R.layout.userlistitem,
+							name);
+					userListView.setAdapter(namesArrayAdapter);
+
+					userListView
+							.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+								@Override
+								public void onItemClick(AdapterView<?> a,
+										View v, int i, long l) {
+									openConversation(name, i);
+								}
+							});
+
+				} else {
+					Toast.makeText(getApplicationContext(),
+							"Error loading user lists", Toast.LENGTH_LONG)
+							.show();
+				}
+			}
+		});
+
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+}

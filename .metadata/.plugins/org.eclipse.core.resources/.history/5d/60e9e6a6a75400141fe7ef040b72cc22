@@ -1,0 +1,184 @@
+package com.example.chat;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.net.UnknownHostException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Locale;
+
+import android.content.Context;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBarActivity;
+import android.telephony.TelephonyManager;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.Toast;
+
+public class MainActivity extends ActionBarActivity {
+	
+	static Context context;
+	final static String localHost="10.0.2.2";
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		if (savedInstanceState == null) {
+			getSupportFragmentManager().beginTransaction()
+					.add(R.id.container, new PlaceholderFragment()).commit();
+		}
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+
+	/**
+	 * A placeholder fragment containing a simple view.
+	 */
+	public static class PlaceholderFragment extends Fragment {
+		
+		public String send_ClientMessage;
+		public int emulator_instance;
+		private SimpleDateFormat df;
+		ArrayList<String> as;
+		ArrayAdapter<String> a;
+
+		public PlaceholderFragment() {
+		}
+
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,
+				Bundle savedInstanceState) {
+			View rootView = inflater.inflate(R.layout.fragment_main, container,
+					false);
+			ListView ls = (ListView)rootView.findViewById(R.id.listView);
+			TelephonyManager tel = (TelephonyManager)context.getSystemService(Context.TELEPHONY_SERVICE);
+			String portStr = tel.getLine1Number().substring(tel.getLine1Number().length() -4);
+			emulator_instance = Integer.parseInt(portStr);
+			as = new ArrayList<String>();
+			a = new ArrayAdapter<>(getActivity(), R.layout.testlistview, as);
+			ls.setAdapter(a);
+			createServer();
+			df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US);
+			return rootView;
+		}
+
+		private void createServer() {
+			new Thread(new Runnable() {
+				
+				@Override
+				public void run() {
+					try{
+						ServerSocket s = new ServerSocket(10000);
+						while(true){
+							Socket ss = s.accept();
+							String msg_ServerSide = null;
+							BufferedReader br = new BufferedReader(new InputStreamReader(ss.getInputStream()));
+							while((msg_ServerSide = br.readLine())!=null){
+								System.out.println();
+								if(!msg_ServerSide.isEmpty()){
+									new displayMessage().execute(msg_ServerSide);
+								}
+							}
+							br.close();
+							ss.close();
+						}
+					}
+					catch(IOException e){
+						e.printStackTrace();
+					}
+				}
+			}).start();
+		}
+		
+		class displayMessage extends AsyncTask<String, Integer, 	String>{
+
+			@Override
+			protected String doInBackground(String... params) {
+				// TODO Auto-generated method stub
+				return params[0];
+			}
+			
+			@Override
+			protected void onPostExecute(String result) {
+				// TODO Auto-generated method stub
+				super.onPostExecute(result);
+				String time = df.format(Calender.getInstance().getTime());
+				String time_now = time.substring(11, 16);
+				a.add(result + "\t" + "\t" + time_now);
+				Toast.makeText(getActivity(), result, Toast.LENGTH_SHORT).show();
+			}
+		}
+		public void sendMessage(View v){
+			EditText ed = (EditText)findViewById(R.id.btn_Send);
+			send_ClientMessage = ed.getText().toString();
+			sendServer();
+			ed.setText(null);
+		}
+		
+		private void sendServer(){
+			new Thread(new Runnable()
+			{
+				public void run()
+				{
+					Socket s=null;
+					try {
+						if(emulator_instance == 5554)
+						{
+						s=new Socket(localHost,11112);
+						}
+						else if(emulator_instance == 5556)
+						{
+						s=new Socket(localHost,11108);	
+						}
+						sendandUpdate(s);
+						s.close();
+					} catch (UnknownHostException e) {
+						e.printStackTrace();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+
+
+			}).start();	
+						
+			}
+			private void sendandUpdate(Socket s) throws IOException 
+			{
+				PrintWriter pw = new PrintWriter(s.getOutputStream());
+				pw.println(send_ClientMessage);
+				pw.close();
+				s.close();
+			}
+		}
+}

@@ -1,10 +1,12 @@
 package com.example.foodtrip;
 
+
 import java.util.ArrayList;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,10 +14,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class FoodTrip extends ActionBarActivity {
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -49,7 +52,9 @@ public class FoodTrip extends ActionBarActivity {
 	 * A placeholder fragment containing a simple view.
 	 */
 	public static class PlaceholderFragment extends Fragment {
-		RestaurantAdapter adapter = null;
+		ListView ls;
+		RestaurantAdapter adapter;
+		static ArrayList<Restaurant>  model = new ArrayList<Restaurant>();
 		
 		public PlaceholderFragment() {
 		}
@@ -59,17 +64,23 @@ public class FoodTrip extends ActionBarActivity {
 				Bundle savedInstanceState) {
 			final View rootView = inflater.inflate(R.layout.fragment_food_trip,
 					container, false);
+			adapter = new RestaurantAdapter(getActivity(), R.layout.row, model);
+			
 			Button save = (Button)rootView.findViewById(R.id.btn_save);
+			ls = (ListView)rootView.findViewById(R.id.restaurants);
 			
 			save.setOnClickListener(new View.OnClickListener() {
 				
 				@Override
 				public void onClick(View arg0) {
-					Restaurant r = new Restaurant();
 					
 					EditText name = (EditText)rootView.findViewById(R.id.field_name);
 					EditText address = (EditText)rootView.findViewById(R.id.field_address);
 					RadioGroup type = (RadioGroup)rootView.findViewById(R.id.rgrp_types);
+					
+					String names = name.getText().toString();
+					String addresses = address.getText().toString();
+					Restaurant r = new Restaurant();
 					
 					switch (type.getCheckedRadioButtonId()) {
 					case R.id.rbtn_sit_down:
@@ -77,11 +88,13 @@ public class FoodTrip extends ActionBarActivity {
 						break;
 					case R.id.rbtn_take_out:
 						r.setType("take_out");
+						break;
 					case R.id.rbtn_delivery:
 						r.setType("delivery");
+						break;
 					}
-					r.setName(name.getText().toString());
-					r.setAddress(address.getText().toString());
+					
+						model.add(new Restaurant(names, addresses, R.drawable.ic_launcher, r.getType()));
 					
 					((EditText) rootView.findViewById(R.id.field_name)).setText("");
 					((EditText) rootView.findViewById(R.id.field_address)).setText("");
@@ -90,7 +103,7 @@ public class FoodTrip extends ActionBarActivity {
 					
 					((EditText)rootView.findViewById(R.id.field_name)).requestFocus();
 					
-					adapter.add(r);
+					ls.setAdapter(adapter);
 				}
 			});
 			

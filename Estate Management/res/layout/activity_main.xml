@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.simpumind.estatemanagement.MainActivity" >
+	
+    <!-- Username-->
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Username."
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:textSize="17dp"/>
+    
+    <!-- Username input -->
+    <EditText 
+        android:id="@+id/inputname"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="15dp"
+        android:singleLine="true"/>
+    
+    <!-- Password -->
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:textSize="17dp"/>
+    
+    <!-- Password input -->
+    <EditText 
+        android:id="@+id/inputpassword"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="15dp"
+        android:singleLine="true"
+        android:inputType="textPassword"/>
+    
+    <!-- Button login -->
+    <Button 
+        android:id="@+id/btnlogin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"/>
+    
+    <!-- Button create account -->
+    <Button 
+        android:id="@+id/btncreate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Not Registered, Here!!"/>
+    
+    <!-- Button quit -->
+    <Button 
+        android:id="@+id/btnquit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Quit"/>
+</LinearLayout>

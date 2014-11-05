@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.smsmanager.SMSManager$PlaceholderFragment" >
+
+    <TextView 
+        android:id="@+id/textViewPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_phone_number"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+    
+    <EditText 
+        android:id="@+id/EditTextNumber"     
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone|number"/>
+    
+    <TextView 
+        android:id="@+id/textViewSMS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_sms_message"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+    
+    <EditText 
+        android:id="@+id/editTextSMS"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:gravity="top"/>
+    
+    <Button 
+        android:id="@+id/buttonSend"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_send_message"/>
+    
+</LinearLayout>
