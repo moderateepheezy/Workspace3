@@ -2091,3 +2091,1843 @@ org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
 
 !ENTRY com.android.ide.eclipse.adt 4 0 2014-11-05 17:07:37.463
 !MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+!SESSION 2014-11-07 11:13:30.233 -----------------------------------------------
+eclipse.buildId=M20130204-1200
+java.version=1.7.0_55
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_NG
+Framework arguments:  -product com.android.ide.eclipse.adt.package.adtproduct
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.android.ide.eclipse.adt.package.adtproduct
+
+!ENTRY org.eclipse.ui 4 4 2014-11-07 11:14:37.664
+!MESSAGE Unable to find Action Set: com.google.gdt.eclipse.core.actionSet
+
+!ENTRY org.eclipse.osgi 2 0 2014-11-07 11:14:54.347
+!MESSAGE While loading class "com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$DeltaVisitor", thread "Thread[Worker-3,5,main]" timed out waiting (5123ms) for thread "Thread[main,6,main]" to finish starting bundle "com.android.ide.eclipse.adt_23.0.2.1259578 [2]". To avoid deadlock, thread "Thread[Worker-3,5,main]" is proceeding but "com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$DeltaVisitor" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:plugins/com.android.ide.eclipse.adt_23.0.2.1259578.jar" by thread "main".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$1.resourceChanged(GlobalProjectMonitor.java:535)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1712)
+	at com.android.ide.eclipse.adt.internal.project.BaseProjectHelper.markProject(BaseProjectHelper.java:220)
+	at com.android.ide.eclipse.adt.internal.project.BaseClasspathContainerInitializer$1.run(BaseClasspathContainerInitializer.java:60)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 24 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$1.resourceChanged(GlobalProjectMonitor.java:535)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1712)
+	at com.android.ide.eclipse.adt.internal.project.BaseProjectHelper.markProject(BaseProjectHelper.java:220)
+	at com.android.ide.eclipse.adt.internal.project.BaseClasspathContainerInitializer$1.run(BaseClasspathContainerInitializer.java:60)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:14:54.721
+!MESSAGE Failed to load properties file for project 'GooglePlayServicesActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:14:56.493
+!MESSAGE Failed to load properties file for project 'HomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:14:58.797
+!MESSAGE Failed to load properties file for project 'MobilePlayground'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:15:01.603
+!MESSAGE Failed to load properties file for project 'RealtimePlaygroundHomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:15:04.232
+!MESSAGE Failed to load properties file for project 'SplashActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:15:04.397
+!MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:15:37.606
+!MESSAGE Failed to load properties file for project 'GooglePlayServicesActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:15:37.618
+!MESSAGE Failed to load properties file for project 'HomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:15:37.635
+!MESSAGE Failed to load properties file for project 'MobilePlayground'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:15:37.650
+!MESSAGE Failed to load properties file for project 'RealtimePlaygroundHomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:15:37.653
+!MESSAGE Failed to load properties file for project 'SplashActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:15:37.653
+!MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+
+!ENTRY org.eclipse.ui 2 2 2014-11-07 11:16:40.651
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:16:59.616
+!MESSAGE Unknown exception in parseSdkContent.
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at android.graphics.Typeface_Accessor.resetDefaults(Typeface_Accessor.java:25)
+	at com.android.layoutlib.bridge.Bridge.dispose(Bridge.java:306)
+	at com.android.ide.common.rendering.LayoutLibrary.dispose(LayoutLibrary.java:312)
+	at com.android.ide.eclipse.adt.internal.sdk.AndroidTargetData.dispose(AndroidTargetData.java:414)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.dispose(Sdk.java:964)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadSdk(Sdk.java:238)
+	at com.android.ide.eclipse.adt.AdtPlugin$7.run(AdtPlugin.java:1415)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.lang.NullPointerException
+	at java.io.File.<init>(File.java:277)
+	at android.graphics.Typeface_Delegate.getSystemFontConfigLocation(Typeface_Delegate.java:196)
+	at android.graphics.Typeface.getSystemFontConfigLocation(Typeface.java:354)
+	at android.graphics.Typeface.init(Typeface.java:277)
+	at android.graphics.Typeface.<clinit>(Typeface.java:336)
+	... 8 more
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:16:59.657
+!MESSAGE parseSdkContent failed
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at android.graphics.Typeface_Accessor.resetDefaults(Typeface_Accessor.java:25)
+	at com.android.layoutlib.bridge.Bridge.dispose(Bridge.java:306)
+	at com.android.ide.common.rendering.LayoutLibrary.dispose(LayoutLibrary.java:312)
+	at com.android.ide.eclipse.adt.internal.sdk.AndroidTargetData.dispose(AndroidTargetData.java:414)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.dispose(Sdk.java:964)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadSdk(Sdk.java:238)
+	at com.android.ide.eclipse.adt.AdtPlugin$7.run(AdtPlugin.java:1415)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.lang.NullPointerException
+	at java.io.File.<init>(File.java:277)
+	at android.graphics.Typeface_Delegate.getSystemFontConfigLocation(Typeface_Delegate.java:196)
+	at android.graphics.Typeface.getSystemFontConfigLocation(Typeface.java:354)
+	at android.graphics.Typeface.init(Typeface.java:277)
+	at android.graphics.Typeface.<clinit>(Typeface.java:336)
+	... 8 more
+!SESSION 2014-11-07 11:27:04.924 -----------------------------------------------
+eclipse.buildId=M20130204-1200
+java.version=1.7.0_55
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_NG
+Framework arguments:  -product com.android.ide.eclipse.adt.package.adtproduct
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.android.ide.eclipse.adt.package.adtproduct
+
+!ENTRY org.eclipse.ui 4 4 2014-11-07 11:27:25.803
+!MESSAGE Unable to find Action Set: com.google.gdt.eclipse.core.actionSet
+
+!ENTRY org.eclipse.osgi 2 0 2014-11-07 11:27:37.381
+!MESSAGE While loading class "com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$DeltaVisitor", thread "Thread[Worker-2,5,main]" timed out waiting (5105ms) for thread "Thread[main,6,main]" to finish starting bundle "com.android.ide.eclipse.adt_23.0.2.1259578 [2]". To avoid deadlock, thread "Thread[Worker-2,5,main]" is proceeding but "com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$DeltaVisitor" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:plugins/com.android.ide.eclipse.adt_23.0.2.1259578.jar" by thread "main".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$1.resourceChanged(GlobalProjectMonitor.java:535)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1712)
+	at com.android.ide.eclipse.adt.internal.project.BaseProjectHelper.markProject(BaseProjectHelper.java:220)
+	at com.android.ide.eclipse.adt.internal.project.BaseClasspathContainerInitializer$1.run(BaseClasspathContainerInitializer.java:60)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 24 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$1.resourceChanged(GlobalProjectMonitor.java:535)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1712)
+	at com.android.ide.eclipse.adt.internal.project.BaseProjectHelper.markProject(BaseProjectHelper.java:220)
+	at com.android.ide.eclipse.adt.internal.project.BaseClasspathContainerInitializer$1.run(BaseClasspathContainerInitializer.java:60)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:27:37.479
+!MESSAGE Failed to load properties file for project 'GooglePlayServicesActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:27:37.606
+!MESSAGE Failed to load properties file for project 'HomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:27:37.860
+!MESSAGE Failed to load properties file for project 'MobilePlayground'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:27:38.536
+!MESSAGE Failed to load properties file for project 'RealtimePlaygroundHomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:27:38.789
+!MESSAGE Failed to load properties file for project 'SplashActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:27:38.804
+!MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:27:45.898
+!MESSAGE Failed to load properties file for project 'GooglePlayServicesActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:27:45.899
+!MESSAGE Failed to load properties file for project 'HomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:27:45.902
+!MESSAGE Failed to load properties file for project 'MobilePlayground'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:27:45.907
+!MESSAGE Failed to load properties file for project 'RealtimePlaygroundHomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:27:45.909
+!MESSAGE Failed to load properties file for project 'SplashActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:27:45.909
+!MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+
+!ENTRY org.eclipse.ui 2 2 2014-11-07 11:30:14.408
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)
+!SESSION 2014-11-07 11:56:28.664 -----------------------------------------------
+eclipse.buildId=M20130204-1200
+java.version=1.7.0_55
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_NG
+Framework arguments:  -product com.android.ide.eclipse.adt.package.adtproduct
+Command-line arguments:  -data /home/simpumind/Desktop/workspace1 -os linux -ws gtk -arch x86_64 -product com.android.ide.eclipse.adt.package.adtproduct
+
+!ENTRY org.eclipse.osgi 2 0 2014-11-07 11:56:43.733
+!MESSAGE While loading class "com.android.ide.eclipse.adt.internal.welcome.AdtStartup", thread "Thread[Worker-0,5,main]" timed out waiting (5005ms) for thread "Thread[Worker-1,5,main]" to finish starting bundle "com.android.ide.eclipse.adt_23.0.4.1468518 [255]". To avoid deadlock, thread "Thread[Worker-0,5,main]" is proceeding but "com.android.ide.eclipse.adt.internal.welcome.AdtStartup" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:plugins/com.android.ide.eclipse.adt_23.0.4.1468518.jar" by thread "Worker-1".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at org.eclipse.osgi.internal.loader.BundleLoader.loadClass(BundleLoader.java:340)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.loadClass(BundleHost.java:229)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.loadClass(AbstractBundle.java:1212)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:265)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.getExecutableExtension(EarlyStartupRunnable.java:117)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:66)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$54.run(Workbench.java:2412)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 26 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at org.eclipse.osgi.internal.loader.BundleLoader.loadClass(BundleLoader.java:340)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.loadClass(BundleHost.java:229)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.loadClass(AbstractBundle.java:1212)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:265)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.getExecutableExtension(EarlyStartupRunnable.java:117)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:66)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$54.run(Workbench.java:2412)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.osgi 2 0 2014-11-07 11:56:48.794
+!MESSAGE While loading class "com.android.ide.eclipse.adt.internal.welcome.AdtStartup$SdkValidator", thread "Thread[Worker-0,5,main]" timed out waiting (5000ms) for thread "Thread[Worker-1,5,main]" to finish starting bundle "com.android.ide.eclipse.adt_23.0.4.1468518 [255]". To avoid deadlock, thread "Thread[Worker-0,5,main]" is proceeding but "com.android.ide.eclipse.adt.internal.welcome.AdtStartup$SdkValidator" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:plugins/com.android.ide.eclipse.adt_23.0.4.1468518.jar" by thread "Worker-1".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2493)
+	at java.lang.Class.getConstructor0(Class.java:2803)
+	at java.lang.Class.newInstance(Class.java:345)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:184)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:265)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.getExecutableExtension(EarlyStartupRunnable.java:117)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:66)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$54.run(Workbench.java:2412)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 27 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2493)
+	at java.lang.Class.getConstructor0(Class.java:2803)
+	at java.lang.Class.newInstance(Class.java:345)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:184)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:265)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.getExecutableExtension(EarlyStartupRunnable.java:117)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:66)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$54.run(Workbench.java:2412)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.osgi 2 0 2014-11-07 11:56:48.988
+!MESSAGE While loading class "com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$DeltaVisitor", thread "Thread[Worker-3,5,main]" timed out waiting (5000ms) for thread "Thread[Worker-1,5,main]" to finish starting bundle "com.android.ide.eclipse.adt_23.0.4.1468518 [255]". To avoid deadlock, thread "Thread[Worker-3,5,main]" is proceeding but "com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$DeltaVisitor" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:plugins/com.android.ide.eclipse.adt_23.0.4.1468518.jar" by thread "Worker-1".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$1.resourceChanged(GlobalProjectMonitor.java:535)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1712)
+	at com.android.ide.eclipse.adt.internal.project.BaseProjectHelper.markProject(BaseProjectHelper.java:220)
+	at com.android.ide.eclipse.adt.internal.project.BaseClasspathContainerInitializer$1.run(BaseClasspathContainerInitializer.java:60)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 24 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$1.resourceChanged(GlobalProjectMonitor.java:535)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1712)
+	at com.android.ide.eclipse.adt.internal.project.BaseProjectHelper.markProject(BaseProjectHelper.java:220)
+	at com.android.ide.eclipse.adt.internal.project.BaseClasspathContainerInitializer$1.run(BaseClasspathContainerInitializer.java:60)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:56:49.225
+!MESSAGE Failed to load properties file for project 'GooglePlayServicesActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:56:49.328
+!MESSAGE Failed to load properties file for project 'HomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:56:49.409
+!MESSAGE Failed to load properties file for project 'MobilePlayground'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:56:49.784
+!MESSAGE Failed to load properties file for project 'RealtimePlaygroundHomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:56:50.126
+!MESSAGE Failed to load properties file for project 'SplashActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:56:50.148
+!MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:56:53.149
+!MESSAGE Failed to load properties file for project 'GooglePlayServicesActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:56:53.150
+!MESSAGE Failed to load properties file for project 'HomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:56:53.156
+!MESSAGE Failed to load properties file for project 'MobilePlayground'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:56:53.162
+!MESSAGE Failed to load properties file for project 'RealtimePlaygroundHomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:56:53.167
+!MESSAGE Failed to load properties file for project 'SplashActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:56:53.167
+!MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+
+!ENTRY org.eclipse.ui 2 2 2014-11-07 11:58:01.629
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.html.ui, propertyPage: org.eclipse.wst.html.ui.propertyPage.project.validation)
+
+!ENTRY org.eclipse.ui 2 2 2014-11-07 11:58:01.636
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:58:39.131
+!MESSAGE Unknown exception in parseSdkContent.
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at android.graphics.Typeface_Accessor.resetDefaults(Typeface_Accessor.java:25)
+	at com.android.layoutlib.bridge.Bridge.dispose(Bridge.java:306)
+	at com.android.ide.common.rendering.LayoutLibrary.dispose(LayoutLibrary.java:312)
+	at com.android.ide.eclipse.adt.internal.sdk.AndroidTargetData.dispose(AndroidTargetData.java:414)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.dispose(Sdk.java:964)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadSdk(Sdk.java:238)
+	at com.android.ide.eclipse.adt.AdtPlugin$7.run(AdtPlugin.java:1415)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.lang.NullPointerException
+	at java.io.File.<init>(File.java:277)
+	at android.graphics.Typeface_Delegate.getSystemFontConfigLocation(Typeface_Delegate.java:196)
+	at android.graphics.Typeface.getSystemFontConfigLocation(Typeface.java:354)
+	at android.graphics.Typeface.init(Typeface.java:277)
+	at android.graphics.Typeface.<clinit>(Typeface.java:336)
+	... 8 more
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 11:58:39.163
+!MESSAGE parseSdkContent failed
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at android.graphics.Typeface_Accessor.resetDefaults(Typeface_Accessor.java:25)
+	at com.android.layoutlib.bridge.Bridge.dispose(Bridge.java:306)
+	at com.android.ide.common.rendering.LayoutLibrary.dispose(LayoutLibrary.java:312)
+	at com.android.ide.eclipse.adt.internal.sdk.AndroidTargetData.dispose(AndroidTargetData.java:414)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.dispose(Sdk.java:964)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadSdk(Sdk.java:238)
+	at com.android.ide.eclipse.adt.AdtPlugin$7.run(AdtPlugin.java:1415)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.lang.NullPointerException
+	at java.io.File.<init>(File.java:277)
+	at android.graphics.Typeface_Delegate.getSystemFontConfigLocation(Typeface_Delegate.java:196)
+	at android.graphics.Typeface.getSystemFontConfigLocation(Typeface.java:354)
+	at android.graphics.Typeface.init(Typeface.java:277)
+	at android.graphics.Typeface.<clinit>(Typeface.java:336)
+	... 8 more
+
+!ENTRY com.google.gwt.eclipse.core 4 0 2014-11-07 11:59:14.336
+!MESSAGE Could not stop source viewer server.
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at com.google.gdt.eclipse.platform.jetty.JettyServer.initLogging(JettyServer.java:40)
+	at com.google.gdt.eclipse.platform.jetty.JettyServer.<clinit>(JettyServer.java:30)
+	at com.google.gwt.eclipse.core.GWTPlugin.stop(GWTPlugin.java:147)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:771)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:764)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:510)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:566)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1206)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:592)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:284)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:692)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:600)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:399)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+Caused by: java.lang.IllegalArgumentException: Logging bundle must not be null.
+	at org.eclipse.core.internal.runtime.Log.<init>(Log.java:30)
+	at org.eclipse.core.internal.runtime.InternalPlatform.getLog(InternalPlatform.java:356)
+	at org.eclipse.core.runtime.Platform.getLog(Platform.java:1004)
+	at com.google.gdt.eclipse.platform.jetty.JettyEclipseLogger.<clinit>(JettyEclipseLogger.java:35)
+	... 25 more
+!SESSION 2014-11-07 11:59:35.965 -----------------------------------------------
+eclipse.buildId=M20130204-1200
+java.version=1.7.0_55
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_NG
+Framework arguments:  -product com.android.ide.eclipse.adt.package.adtproduct
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.android.ide.eclipse.adt.package.adtproduct
+
+!ENTRY org.eclipse.osgi 2 0 2014-11-07 11:59:59.975
+!MESSAGE While loading class "com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$DeltaVisitor", thread "Thread[Worker-4,5,main]" timed out waiting (5004ms) for thread "Thread[main,6,main]" to finish starting bundle "com.android.ide.eclipse.adt_23.0.4.1468518 [255]". To avoid deadlock, thread "Thread[Worker-4,5,main]" is proceeding but "com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$DeltaVisitor" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:plugins/com.android.ide.eclipse.adt_23.0.4.1468518.jar" by thread "main".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$1.resourceChanged(GlobalProjectMonitor.java:535)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1712)
+	at com.android.ide.eclipse.adt.internal.project.BaseProjectHelper.markProject(BaseProjectHelper.java:220)
+	at com.android.ide.eclipse.adt.internal.project.BaseClasspathContainerInitializer$1.run(BaseClasspathContainerInitializer.java:60)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 24 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$1.resourceChanged(GlobalProjectMonitor.java:535)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1712)
+	at com.android.ide.eclipse.adt.internal.project.BaseProjectHelper.markProject(BaseProjectHelper.java:220)
+	at com.android.ide.eclipse.adt.internal.project.BaseClasspathContainerInitializer$1.run(BaseClasspathContainerInitializer.java:60)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:00:00.125
+!MESSAGE Failed to load properties file for project 'GooglePlayServicesActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:00:00.194
+!MESSAGE Failed to load properties file for project 'HomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:00:00.795
+!MESSAGE Failed to load properties file for project 'MobilePlayground'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:00:01.074
+!MESSAGE Failed to load properties file for project 'RealtimePlaygroundHomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:00:01.251
+!MESSAGE Failed to load properties file for project 'SplashActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:00:01.266
+!MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:00:07.597
+!MESSAGE Failed to load properties file for project 'GooglePlayServicesActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:00:07.598
+!MESSAGE Failed to load properties file for project 'HomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:00:07.603
+!MESSAGE Failed to load properties file for project 'MobilePlayground'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:00:07.609
+!MESSAGE Failed to load properties file for project 'RealtimePlaygroundHomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:00:07.612
+!MESSAGE Failed to load properties file for project 'SplashActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:00:07.613
+!MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:00:45.370
+!MESSAGE Unknown exception in parseSdkContent.
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at android.graphics.Typeface_Accessor.resetDefaults(Typeface_Accessor.java:25)
+	at com.android.layoutlib.bridge.Bridge.dispose(Bridge.java:306)
+	at com.android.ide.common.rendering.LayoutLibrary.dispose(LayoutLibrary.java:312)
+	at com.android.ide.eclipse.adt.internal.sdk.AndroidTargetData.dispose(AndroidTargetData.java:414)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.dispose(Sdk.java:964)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadSdk(Sdk.java:238)
+	at com.android.ide.eclipse.adt.AdtPlugin$7.run(AdtPlugin.java:1415)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.lang.NullPointerException
+	at java.io.File.<init>(File.java:277)
+	at android.graphics.Typeface_Delegate.getSystemFontConfigLocation(Typeface_Delegate.java:196)
+	at android.graphics.Typeface.getSystemFontConfigLocation(Typeface.java:354)
+	at android.graphics.Typeface.init(Typeface.java:277)
+	at android.graphics.Typeface.<clinit>(Typeface.java:336)
+	... 8 more
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:00:45.372
+!MESSAGE parseSdkContent failed
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at android.graphics.Typeface_Accessor.resetDefaults(Typeface_Accessor.java:25)
+	at com.android.layoutlib.bridge.Bridge.dispose(Bridge.java:306)
+	at com.android.ide.common.rendering.LayoutLibrary.dispose(LayoutLibrary.java:312)
+	at com.android.ide.eclipse.adt.internal.sdk.AndroidTargetData.dispose(AndroidTargetData.java:414)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.dispose(Sdk.java:964)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadSdk(Sdk.java:238)
+	at com.android.ide.eclipse.adt.AdtPlugin$7.run(AdtPlugin.java:1415)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.lang.NullPointerException
+	at java.io.File.<init>(File.java:277)
+	at android.graphics.Typeface_Delegate.getSystemFontConfigLocation(Typeface_Delegate.java:196)
+	at android.graphics.Typeface.getSystemFontConfigLocation(Typeface.java:354)
+	at android.graphics.Typeface.init(Typeface.java:277)
+	at android.graphics.Typeface.<clinit>(Typeface.java:336)
+	... 8 more
+
+!ENTRY org.eclipse.ui 2 2 2014-11-07 12:01:50.895
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.html.ui, propertyPage: org.eclipse.wst.html.ui.propertyPage.project.validation)
+
+!ENTRY org.eclipse.ui 2 2 2014-11-07 12:01:50.895
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)
+
+!ENTRY com.google.gwt.eclipse.core 4 0 2014-11-07 12:02:17.363
+!MESSAGE Could not stop source viewer server.
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at com.google.gdt.eclipse.platform.jetty.JettyServer.initLogging(JettyServer.java:40)
+	at com.google.gdt.eclipse.platform.jetty.JettyServer.<clinit>(JettyServer.java:30)
+	at com.google.gwt.eclipse.core.GWTPlugin.stop(GWTPlugin.java:147)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:771)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:764)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:510)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:566)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1206)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:592)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:284)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:692)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:600)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:399)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+Caused by: java.lang.IllegalArgumentException: Logging bundle must not be null.
+	at org.eclipse.core.internal.runtime.Log.<init>(Log.java:30)
+	at org.eclipse.core.internal.runtime.InternalPlatform.getLog(InternalPlatform.java:356)
+	at org.eclipse.core.runtime.Platform.getLog(Platform.java:1004)
+	at com.google.gdt.eclipse.platform.jetty.JettyEclipseLogger.<clinit>(JettyEclipseLogger.java:35)
+	... 25 more
+!SESSION 2014-11-07 12:02:36.770 -----------------------------------------------
+eclipse.buildId=M20130204-1200
+java.version=1.7.0_55
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_NG
+Framework arguments:  -product com.android.ide.eclipse.adt.package.adtproduct
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.android.ide.eclipse.adt.package.adtproduct
+
+!ENTRY org.eclipse.osgi 2 0 2014-11-07 12:02:57.488
+!MESSAGE While loading class "com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$DeltaVisitor", thread "Thread[Worker-4,5,main]" timed out waiting (5003ms) for thread "Thread[main,6,main]" to finish starting bundle "com.android.ide.eclipse.adt_23.0.4.1468518 [255]". To avoid deadlock, thread "Thread[Worker-4,5,main]" is proceeding but "com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$DeltaVisitor" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:plugins/com.android.ide.eclipse.adt_23.0.4.1468518.jar" by thread "main".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$1.resourceChanged(GlobalProjectMonitor.java:535)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1712)
+	at com.android.ide.eclipse.adt.internal.project.BaseProjectHelper.markProject(BaseProjectHelper.java:220)
+	at com.android.ide.eclipse.adt.internal.project.BaseClasspathContainerInitializer$1.run(BaseClasspathContainerInitializer.java:60)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 24 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$1.resourceChanged(GlobalProjectMonitor.java:535)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1712)
+	at com.android.ide.eclipse.adt.internal.project.BaseProjectHelper.markProject(BaseProjectHelper.java:220)
+	at com.android.ide.eclipse.adt.internal.project.BaseClasspathContainerInitializer$1.run(BaseClasspathContainerInitializer.java:60)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:02:57.646
+!MESSAGE Failed to load properties file for project 'GooglePlayServicesActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:02:57.732
+!MESSAGE Failed to load properties file for project 'HomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:02:57.838
+!MESSAGE Failed to load properties file for project 'MobilePlayground'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:02:58.039
+!MESSAGE Failed to load properties file for project 'RealtimePlaygroundHomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:02:58.178
+!MESSAGE Failed to load properties file for project 'SplashActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:02:58.202
+!MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:03:05.176
+!MESSAGE Failed to load properties file for project 'GooglePlayServicesActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:03:05.176
+!MESSAGE Failed to load properties file for project 'HomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:03:05.180
+!MESSAGE Failed to load properties file for project 'MobilePlayground'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:03:05.184
+!MESSAGE Failed to load properties file for project 'RealtimePlaygroundHomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:03:05.186
+!MESSAGE Failed to load properties file for project 'SplashActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:03:05.186
+!MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+
+!ENTRY org.eclipse.ui 2 2 2014-11-07 12:03:36.961
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.html.ui, propertyPage: org.eclipse.wst.html.ui.propertyPage.project.validation)
+
+!ENTRY org.eclipse.ui 2 2 2014-11-07 12:03:36.962
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:03:53.899
+!MESSAGE Unknown exception in parseSdkContent.
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at android.graphics.Typeface_Accessor.resetDefaults(Typeface_Accessor.java:25)
+	at com.android.layoutlib.bridge.Bridge.dispose(Bridge.java:306)
+	at com.android.ide.common.rendering.LayoutLibrary.dispose(LayoutLibrary.java:312)
+	at com.android.ide.eclipse.adt.internal.sdk.AndroidTargetData.dispose(AndroidTargetData.java:414)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.dispose(Sdk.java:964)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadSdk(Sdk.java:238)
+	at com.android.ide.eclipse.adt.AdtPlugin$7.run(AdtPlugin.java:1415)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.lang.NullPointerException
+	at java.io.File.<init>(File.java:277)
+	at android.graphics.Typeface_Delegate.getSystemFontConfigLocation(Typeface_Delegate.java:196)
+	at android.graphics.Typeface.getSystemFontConfigLocation(Typeface.java:354)
+	at android.graphics.Typeface.init(Typeface.java:277)
+	at android.graphics.Typeface.<clinit>(Typeface.java:336)
+	... 8 more
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:03:53.906
+!MESSAGE parseSdkContent failed
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at android.graphics.Typeface_Accessor.resetDefaults(Typeface_Accessor.java:25)
+	at com.android.layoutlib.bridge.Bridge.dispose(Bridge.java:306)
+	at com.android.ide.common.rendering.LayoutLibrary.dispose(LayoutLibrary.java:312)
+	at com.android.ide.eclipse.adt.internal.sdk.AndroidTargetData.dispose(AndroidTargetData.java:414)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.dispose(Sdk.java:964)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadSdk(Sdk.java:238)
+	at com.android.ide.eclipse.adt.AdtPlugin$7.run(AdtPlugin.java:1415)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.lang.NullPointerException
+	at java.io.File.<init>(File.java:277)
+	at android.graphics.Typeface_Delegate.getSystemFontConfigLocation(Typeface_Delegate.java:196)
+	at android.graphics.Typeface.getSystemFontConfigLocation(Typeface.java:354)
+	at android.graphics.Typeface.init(Typeface.java:277)
+	at android.graphics.Typeface.<clinit>(Typeface.java:336)
+	... 8 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2014-11-07 12:04:07.981
+!MESSAGE An internal error occurred during: "Launching DragNDropDemo".
+!STACK 0
+java.lang.NullPointerException
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.launch(AndroidLaunchController.java:480)
+	at com.android.ide.eclipse.adt.internal.launch.LaunchConfigDelegate.doLaunch(LaunchConfigDelegate.java:330)
+	at com.android.ide.eclipse.adt.internal.launch.LaunchConfigDelegate.launch(LaunchConfigDelegate.java:246)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:05:37.413
+!MESSAGE Unknown exception in parseSdkContent.
+!STACK 0
+java.lang.NoClassDefFoundError: Could not initialize class android.graphics.Typeface
+	at android.graphics.Typeface_Accessor.resetDefaults(Typeface_Accessor.java:25)
+	at com.android.layoutlib.bridge.Bridge.dispose(Bridge.java:306)
+	at com.android.ide.common.rendering.LayoutLibrary.dispose(LayoutLibrary.java:312)
+	at com.android.ide.eclipse.adt.internal.sdk.AndroidTargetData.dispose(AndroidTargetData.java:414)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.dispose(Sdk.java:964)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadSdk(Sdk.java:238)
+	at com.android.ide.eclipse.adt.AdtPlugin$7.run(AdtPlugin.java:1415)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:05:37.414
+!MESSAGE parseSdkContent failed
+!STACK 0
+java.lang.NoClassDefFoundError: Could not initialize class android.graphics.Typeface
+	at android.graphics.Typeface_Accessor.resetDefaults(Typeface_Accessor.java:25)
+	at com.android.layoutlib.bridge.Bridge.dispose(Bridge.java:306)
+	at com.android.ide.common.rendering.LayoutLibrary.dispose(LayoutLibrary.java:312)
+	at com.android.ide.eclipse.adt.internal.sdk.AndroidTargetData.dispose(AndroidTargetData.java:414)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.dispose(Sdk.java:964)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadSdk(Sdk.java:238)
+	at com.android.ide.eclipse.adt.AdtPlugin$7.run(AdtPlugin.java:1415)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:13:46.661
+!MESSAGE Unknown exception in parseSdkContent.
+!STACK 0
+java.lang.NoClassDefFoundError: Could not initialize class android.graphics.Typeface
+	at android.graphics.Typeface_Accessor.resetDefaults(Typeface_Accessor.java:25)
+	at com.android.layoutlib.bridge.Bridge.dispose(Bridge.java:306)
+	at com.android.ide.common.rendering.LayoutLibrary.dispose(LayoutLibrary.java:312)
+	at com.android.ide.eclipse.adt.internal.sdk.AndroidTargetData.dispose(AndroidTargetData.java:414)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.dispose(Sdk.java:964)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadSdk(Sdk.java:238)
+	at com.android.ide.eclipse.adt.AdtPlugin$7.run(AdtPlugin.java:1415)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:13:46.705
+!MESSAGE parseSdkContent failed
+!STACK 0
+java.lang.NoClassDefFoundError: Could not initialize class android.graphics.Typeface
+	at android.graphics.Typeface_Accessor.resetDefaults(Typeface_Accessor.java:25)
+	at com.android.layoutlib.bridge.Bridge.dispose(Bridge.java:306)
+	at com.android.ide.common.rendering.LayoutLibrary.dispose(LayoutLibrary.java:312)
+	at com.android.ide.eclipse.adt.internal.sdk.AndroidTargetData.dispose(AndroidTargetData.java:414)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.dispose(Sdk.java:964)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadSdk(Sdk.java:238)
+	at com.android.ide.eclipse.adt.AdtPlugin$7.run(AdtPlugin.java:1415)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.google.gwt.eclipse.core 4 0 2014-11-07 12:13:56.095
+!MESSAGE Could not stop source viewer server.
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at com.google.gdt.eclipse.platform.jetty.JettyServer.initLogging(JettyServer.java:40)
+	at com.google.gdt.eclipse.platform.jetty.JettyServer.<clinit>(JettyServer.java:30)
+	at com.google.gwt.eclipse.core.GWTPlugin.stop(GWTPlugin.java:147)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:771)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:764)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:510)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:566)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1206)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:592)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:284)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:692)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:600)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:399)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+Caused by: java.lang.IllegalArgumentException: Logging bundle must not be null.
+	at org.eclipse.core.internal.runtime.Log.<init>(Log.java:30)
+	at org.eclipse.core.internal.runtime.InternalPlatform.getLog(InternalPlatform.java:356)
+	at org.eclipse.core.runtime.Platform.getLog(Platform.java:1004)
+	at com.google.gdt.eclipse.platform.jetty.JettyEclipseLogger.<clinit>(JettyEclipseLogger.java:35)
+	... 25 more
+!SESSION 2014-11-07 12:13:59.768 -----------------------------------------------
+eclipse.buildId=M20130204-1200
+java.version=1.7.0_55
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_NG
+Framework arguments:  -product com.android.ide.eclipse.adt.package.adtproduct
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.android.ide.eclipse.adt.package.adtproduct
+
+!ENTRY org.eclipse.osgi 2 0 2014-11-07 12:14:24.263
+!MESSAGE While loading class "com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$DeltaVisitor", thread "Thread[Worker-1,5,main]" timed out waiting (5004ms) for thread "Thread[main,6,main]" to finish starting bundle "com.android.ide.eclipse.adt_23.0.4.1468518 [255]". To avoid deadlock, thread "Thread[Worker-1,5,main]" is proceeding but "com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$DeltaVisitor" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:plugins/com.android.ide.eclipse.adt_23.0.4.1468518.jar" by thread "main".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$1.resourceChanged(GlobalProjectMonitor.java:535)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1712)
+	at com.android.ide.eclipse.adt.internal.project.BaseProjectHelper.markProject(BaseProjectHelper.java:220)
+	at com.android.ide.eclipse.adt.internal.project.BaseClasspathContainerInitializer$1.run(BaseClasspathContainerInitializer.java:60)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 24 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$1.resourceChanged(GlobalProjectMonitor.java:535)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1712)
+	at com.android.ide.eclipse.adt.internal.project.BaseProjectHelper.markProject(BaseProjectHelper.java:220)
+	at com.android.ide.eclipse.adt.internal.project.BaseClasspathContainerInitializer$1.run(BaseClasspathContainerInitializer.java:60)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:14:24.704
+!MESSAGE Failed to load properties file for project 'GooglePlayServicesActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:14:25.031
+!MESSAGE Failed to load properties file for project 'HomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:14:25.569
+!MESSAGE Failed to load properties file for project 'MobilePlayground'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:14:26.281
+!MESSAGE Failed to load properties file for project 'RealtimePlaygroundHomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:14:26.477
+!MESSAGE Failed to load properties file for project 'SplashActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:14:26.492
+!MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:14:32.685
+!MESSAGE Failed to load properties file for project 'GooglePlayServicesActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:14:32.687
+!MESSAGE Failed to load properties file for project 'HomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:14:32.693
+!MESSAGE Failed to load properties file for project 'MobilePlayground'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:14:32.697
+!MESSAGE Failed to load properties file for project 'RealtimePlaygroundHomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:14:32.699
+!MESSAGE Failed to load properties file for project 'SplashActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:14:32.699
+!MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:15:35.010
+!MESSAGE Unknown exception in parseSdkContent.
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at android.graphics.Typeface_Accessor.resetDefaults(Typeface_Accessor.java:25)
+	at com.android.layoutlib.bridge.Bridge.dispose(Bridge.java:306)
+	at com.android.ide.common.rendering.LayoutLibrary.dispose(LayoutLibrary.java:312)
+	at com.android.ide.eclipse.adt.internal.sdk.AndroidTargetData.dispose(AndroidTargetData.java:414)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.dispose(Sdk.java:964)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadSdk(Sdk.java:238)
+	at com.android.ide.eclipse.adt.AdtPlugin$7.run(AdtPlugin.java:1415)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.lang.NullPointerException
+	at java.io.File.<init>(File.java:277)
+	at android.graphics.Typeface_Delegate.getSystemFontConfigLocation(Typeface_Delegate.java:196)
+	at android.graphics.Typeface.getSystemFontConfigLocation(Typeface.java:354)
+	at android.graphics.Typeface.init(Typeface.java:277)
+	at android.graphics.Typeface.<clinit>(Typeface.java:336)
+	... 8 more
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:15:35.048
+!MESSAGE parseSdkContent failed
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at android.graphics.Typeface_Accessor.resetDefaults(Typeface_Accessor.java:25)
+	at com.android.layoutlib.bridge.Bridge.dispose(Bridge.java:306)
+	at com.android.ide.common.rendering.LayoutLibrary.dispose(LayoutLibrary.java:312)
+	at com.android.ide.eclipse.adt.internal.sdk.AndroidTargetData.dispose(AndroidTargetData.java:414)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.dispose(Sdk.java:964)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadSdk(Sdk.java:238)
+	at com.android.ide.eclipse.adt.AdtPlugin$7.run(AdtPlugin.java:1415)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.lang.NullPointerException
+	at java.io.File.<init>(File.java:277)
+	at android.graphics.Typeface_Delegate.getSystemFontConfigLocation(Typeface_Delegate.java:196)
+	at android.graphics.Typeface.getSystemFontConfigLocation(Typeface.java:354)
+	at android.graphics.Typeface.init(Typeface.java:277)
+	at android.graphics.Typeface.<clinit>(Typeface.java:336)
+	... 8 more
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:15:48.882
+!MESSAGE Unknown exception in parseSdkContent.
+!STACK 0
+java.lang.NoClassDefFoundError: Could not initialize class android.graphics.Typeface
+	at android.graphics.Typeface_Accessor.resetDefaults(Typeface_Accessor.java:25)
+	at com.android.layoutlib.bridge.Bridge.dispose(Bridge.java:306)
+	at com.android.ide.common.rendering.LayoutLibrary.dispose(LayoutLibrary.java:312)
+	at com.android.ide.eclipse.adt.internal.sdk.AndroidTargetData.dispose(AndroidTargetData.java:414)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.dispose(Sdk.java:964)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadSdk(Sdk.java:238)
+	at com.android.ide.eclipse.adt.AdtPlugin$7.run(AdtPlugin.java:1415)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:15:48.883
+!MESSAGE parseSdkContent failed
+!STACK 0
+java.lang.NoClassDefFoundError: Could not initialize class android.graphics.Typeface
+	at android.graphics.Typeface_Accessor.resetDefaults(Typeface_Accessor.java:25)
+	at com.android.layoutlib.bridge.Bridge.dispose(Bridge.java:306)
+	at com.android.ide.common.rendering.LayoutLibrary.dispose(LayoutLibrary.java:312)
+	at com.android.ide.eclipse.adt.internal.sdk.AndroidTargetData.dispose(AndroidTargetData.java:414)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.dispose(Sdk.java:964)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadSdk(Sdk.java:238)
+	at com.android.ide.eclipse.adt.AdtPlugin$7.run(AdtPlugin.java:1415)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:20:08.511
+!MESSAGE Unknown exception in parseSdkContent.
+!STACK 0
+java.lang.NoClassDefFoundError: Could not initialize class android.graphics.Typeface
+	at android.graphics.Typeface_Accessor.resetDefaults(Typeface_Accessor.java:25)
+	at com.android.layoutlib.bridge.Bridge.dispose(Bridge.java:306)
+	at com.android.ide.common.rendering.LayoutLibrary.dispose(LayoutLibrary.java:312)
+	at com.android.ide.eclipse.adt.internal.sdk.AndroidTargetData.dispose(AndroidTargetData.java:414)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.dispose(Sdk.java:964)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadSdk(Sdk.java:238)
+	at com.android.ide.eclipse.adt.AdtPlugin$7.run(AdtPlugin.java:1415)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:20:08.524
+!MESSAGE parseSdkContent failed
+!STACK 0
+java.lang.NoClassDefFoundError: Could not initialize class android.graphics.Typeface
+	at android.graphics.Typeface_Accessor.resetDefaults(Typeface_Accessor.java:25)
+	at com.android.layoutlib.bridge.Bridge.dispose(Bridge.java:306)
+	at com.android.ide.common.rendering.LayoutLibrary.dispose(LayoutLibrary.java:312)
+	at com.android.ide.eclipse.adt.internal.sdk.AndroidTargetData.dispose(AndroidTargetData.java:414)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.dispose(Sdk.java:964)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadSdk(Sdk.java:238)
+	at com.android.ide.eclipse.adt.AdtPlugin$7.run(AdtPlugin.java:1415)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:20:47.281
+!MESSAGE Failed to load properties file for project 'TheTat'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:20:49.955
+!MESSAGE Unknown exception in parseSdkContent.
+!STACK 0
+java.lang.NoClassDefFoundError: Could not initialize class android.graphics.Typeface
+	at android.graphics.Typeface_Accessor.resetDefaults(Typeface_Accessor.java:25)
+	at com.android.layoutlib.bridge.Bridge.dispose(Bridge.java:306)
+	at com.android.ide.common.rendering.LayoutLibrary.dispose(LayoutLibrary.java:312)
+	at com.android.ide.eclipse.adt.internal.sdk.AndroidTargetData.dispose(AndroidTargetData.java:414)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.dispose(Sdk.java:964)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadSdk(Sdk.java:238)
+	at com.android.ide.eclipse.adt.AdtPlugin$7.run(AdtPlugin.java:1415)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:20:49.956
+!MESSAGE parseSdkContent failed
+!STACK 0
+java.lang.NoClassDefFoundError: Could not initialize class android.graphics.Typeface
+	at android.graphics.Typeface_Accessor.resetDefaults(Typeface_Accessor.java:25)
+	at com.android.layoutlib.bridge.Bridge.dispose(Bridge.java:306)
+	at com.android.ide.common.rendering.LayoutLibrary.dispose(LayoutLibrary.java:312)
+	at com.android.ide.eclipse.adt.internal.sdk.AndroidTargetData.dispose(AndroidTargetData.java:414)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.dispose(Sdk.java:964)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadSdk(Sdk.java:238)
+	at com.android.ide.eclipse.adt.AdtPlugin$7.run(AdtPlugin.java:1415)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:20:49.956
+!MESSAGE Unknown exception in parseSdkContent.
+!STACK 0
+java.lang.NoClassDefFoundError: Could not initialize class android.graphics.Typeface
+	at android.graphics.Typeface_Accessor.resetDefaults(Typeface_Accessor.java:25)
+	at com.android.layoutlib.bridge.Bridge.dispose(Bridge.java:306)
+	at com.android.ide.common.rendering.LayoutLibrary.dispose(LayoutLibrary.java:312)
+	at com.android.ide.eclipse.adt.internal.sdk.AndroidTargetData.dispose(AndroidTargetData.java:414)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.dispose(Sdk.java:964)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadSdk(Sdk.java:238)
+	at com.android.ide.eclipse.adt.AdtPlugin$7.run(AdtPlugin.java:1415)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:20:49.978
+!MESSAGE parseSdkContent failed
+!STACK 0
+java.lang.NoClassDefFoundError: Could not initialize class android.graphics.Typeface
+	at android.graphics.Typeface_Accessor.resetDefaults(Typeface_Accessor.java:25)
+	at com.android.layoutlib.bridge.Bridge.dispose(Bridge.java:306)
+	at com.android.ide.common.rendering.LayoutLibrary.dispose(LayoutLibrary.java:312)
+	at com.android.ide.eclipse.adt.internal.sdk.AndroidTargetData.dispose(AndroidTargetData.java:414)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.dispose(Sdk.java:964)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadSdk(Sdk.java:238)
+	at com.android.ide.eclipse.adt.AdtPlugin$7.run(AdtPlugin.java:1415)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.ui 2 2 2014-11-07 12:20:59.398
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.html.ui, propertyPage: org.eclipse.wst.html.ui.propertyPage.project.validation)
+
+!ENTRY org.eclipse.ui 2 2 2014-11-07 12:20:59.398
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.xml.ui, propertyPage: org.eclipse.wst.xml.ui.propertyPage.project.validation)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:21:10.530
+!MESSAGE Failed to load properties file for project 'GooglePlayServicesActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:21:10.535
+!MESSAGE Failed to load properties file for project 'HomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:21:10.536
+!MESSAGE Failed to load properties file for project 'MobilePlayground'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:21:10.536
+!MESSAGE Failed to load properties file for project 'RealtimePlaygroundHomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:21:10.546
+!MESSAGE Failed to load properties file for project 'SplashActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:21:10.555
+!MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:30:49.882
+!MESSAGE Failed to load properties file for project 'GooglePlayServicesActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:30:49.900
+!MESSAGE Failed to load properties file for project 'HomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:30:49.901
+!MESSAGE Failed to load properties file for project 'MobilePlayground'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:30:49.901
+!MESSAGE Failed to load properties file for project 'RealtimePlaygroundHomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:30:49.902
+!MESSAGE Failed to load properties file for project 'SplashActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:30:49.902
+!MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:31:19.031
+!MESSAGE Unknown exception in parseSdkContent.
+!STACK 0
+java.lang.NoClassDefFoundError: Could not initialize class android.graphics.Typeface
+	at android.graphics.Typeface_Accessor.resetDefaults(Typeface_Accessor.java:25)
+	at com.android.layoutlib.bridge.Bridge.dispose(Bridge.java:306)
+	at com.android.ide.common.rendering.LayoutLibrary.dispose(LayoutLibrary.java:312)
+	at com.android.ide.eclipse.adt.internal.sdk.AndroidTargetData.dispose(AndroidTargetData.java:414)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.dispose(Sdk.java:964)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadSdk(Sdk.java:238)
+	at com.android.ide.eclipse.adt.AdtPlugin$7.run(AdtPlugin.java:1415)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:31:19.032
+!MESSAGE parseSdkContent failed
+!STACK 0
+java.lang.NoClassDefFoundError: Could not initialize class android.graphics.Typeface
+	at android.graphics.Typeface_Accessor.resetDefaults(Typeface_Accessor.java:25)
+	at com.android.layoutlib.bridge.Bridge.dispose(Bridge.java:306)
+	at com.android.ide.common.rendering.LayoutLibrary.dispose(LayoutLibrary.java:312)
+	at com.android.ide.eclipse.adt.internal.sdk.AndroidTargetData.dispose(AndroidTargetData.java:414)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.dispose(Sdk.java:964)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk.loadSdk(Sdk.java:238)
+	at com.android.ide.eclipse.adt.AdtPlugin$7.run(AdtPlugin.java:1415)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.osgi 2 0 2014-11-07 12:31:20.694
+!MESSAGE While loading class "com.google.gdt.eclipse.suite.launch.ui.WebAppLaunchShortcut", thread "Thread[Worker-15,5,main]" timed out waiting (5000ms) for thread "Thread[Worker-8,5,main]" to finish starting bundle "com.google.gdt.eclipse.suite_3.8.0.v201410302155-rel-r42 [418]". To avoid deadlock, thread "Thread[Worker-15,5,main]" is proceeding but "com.google.gdt.eclipse.suite.launch.ui.WebAppLaunchShortcut" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:plugins/com.google.gdt.eclipse.suite_3.8.0.v201410302155-rel-r42.jar" by thread "Worker-8".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at org.eclipse.osgi.internal.loader.BundleLoader.loadClass(BundleLoader.java:340)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.loadClass(BundleHost.java:229)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.loadClass(AbstractBundle.java:1212)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.getDelegate(LaunchShortcutExtension.java:410)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.getLaunchConfigurations(LaunchShortcutExtension.java:494)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getParticipatingLaunchConfigurations(LaunchingResourceManager.java:493)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:322)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:240)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$2.run(LaunchingResourceManager.java:138)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 27 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at org.eclipse.osgi.internal.loader.BundleLoader.loadClass(BundleLoader.java:340)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.loadClass(BundleHost.java:229)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.loadClass(AbstractBundle.java:1212)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.getDelegate(LaunchShortcutExtension.java:410)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.getLaunchConfigurations(LaunchShortcutExtension.java:494)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getParticipatingLaunchConfigurations(LaunchingResourceManager.java:493)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:322)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:240)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$2.run(LaunchingResourceManager.java:138)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.google.gdt.eclipse.core 1 0 2014-11-07 12:31:21.438
+!MESSAGE Scheduled rebuild of project Demo Server because of plugin update (current version: 3.8.0.v201410302155-rel-r42)
+
+!ENTRY com.google.gdt.eclipse.core 1 0 2014-11-07 12:31:21.439
+!MESSAGE Scheduled rebuild of project Server because of plugin update (current version: 3.8.0.v201410302155-rel-r42)
+
+!ENTRY com.google.gdt.eclipse.core 2 0 2014-11-07 12:32:48.308
+!MESSAGE Unable to connect to https://dl.google.com/eclipse/appengine/site.xml.
+
+!ENTRY com.google.gdt.eclipse.core 2 0 2014-11-07 12:33:06.723
+!MESSAGE Unable to connect to https://dl.google.com/eclipse/gwt/site.xml.
+
+!ENTRY com.google.gdt.eclipse.core 2 0 2014-11-07 12:33:08.950
+!MESSAGE Unable to connect to https://dl.google.com/eclipse/plugin/core/4.2/site.xml.
+
+!ENTRY com.google.gwt.eclipse.core 4 0 2014-11-07 12:45:53.601
+!MESSAGE Could not stop source viewer server.
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at com.google.gdt.eclipse.platform.jetty.JettyServer.initLogging(JettyServer.java:40)
+	at com.google.gdt.eclipse.platform.jetty.JettyServer.<clinit>(JettyServer.java:30)
+	at com.google.gwt.eclipse.core.GWTPlugin.stop(GWTPlugin.java:147)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:771)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:764)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:510)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:566)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1206)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:592)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:284)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:692)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:600)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:399)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+Caused by: java.lang.IllegalArgumentException: Logging bundle must not be null.
+	at org.eclipse.core.internal.runtime.Log.<init>(Log.java:30)
+	at org.eclipse.core.internal.runtime.InternalPlatform.getLog(InternalPlatform.java:356)
+	at org.eclipse.core.runtime.Platform.getLog(Platform.java:1004)
+	at com.google.gdt.eclipse.platform.jetty.JettyEclipseLogger.<clinit>(JettyEclipseLogger.java:35)
+	... 25 more
+!SESSION 2014-11-07 12:45:57.721 -----------------------------------------------
+eclipse.buildId=M20130204-1200
+java.version=1.7.0_55
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_NG
+Framework arguments:  -product com.android.ide.eclipse.adt.package.adtproduct
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product com.android.ide.eclipse.adt.package.adtproduct
+
+!ENTRY org.eclipse.osgi 2 0 2014-11-07 12:46:23.038
+!MESSAGE While loading class "com.android.ide.eclipse.adt.internal.project.AndroidClasspathContainerInitializer", thread "Thread[Worker-3,5,main]" timed out waiting (5006ms) for thread "Thread[Worker-0,5,main]" to finish starting bundle "com.android.ide.eclipse.adt_23.0.4.1468518 [255]". To avoid deadlock, thread "Thread[Worker-3,5,main]" is proceeding but "com.android.ide.eclipse.adt.internal.project.AndroidClasspathContainerInitializer" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:plugins/com.android.ide.eclipse.adt_23.0.4.1468518.jar" by thread "Worker-0".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at org.eclipse.osgi.internal.loader.BundleLoader.loadClass(BundleLoader.java:340)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.loadClass(BundleHost.java:229)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.loadClass(AbstractBundle.java:1212)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.jdt.core.JavaCore.computeClasspathContainerInitializer(JavaCore.java:3175)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainerInitializer(JavaCore.java:3151)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:2824)
+	at org.eclipse.jdt.internal.core.JavaModelManager$11.run(JavaModelManager.java:2749)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:2789)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:1873)
+	at org.eclipse.jdt.core.JavaCore.initializeAfterLoad(JavaCore.java:3886)
+	at org.eclipse.jdt.internal.ui.InitializeAfterLoadJob$RealJob.run(InitializeAfterLoadJob.java:36)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 30 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at org.eclipse.osgi.internal.loader.BundleLoader.loadClass(BundleLoader.java:340)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.loadClass(BundleHost.java:229)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.loadClass(AbstractBundle.java:1212)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.jdt.core.JavaCore.computeClasspathContainerInitializer(JavaCore.java:3175)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainerInitializer(JavaCore.java:3151)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:2824)
+	at org.eclipse.jdt.internal.core.JavaModelManager$11.run(JavaModelManager.java:2749)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:2789)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:1873)
+	at org.eclipse.jdt.core.JavaCore.initializeAfterLoad(JavaCore.java:3886)
+	at org.eclipse.jdt.internal.ui.InitializeAfterLoadJob$RealJob.run(InitializeAfterLoadJob.java:36)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.osgi 2 0 2014-11-07 12:46:26.688
+!MESSAGE While loading class "com.android.ide.eclipse.adt.internal.project.LibraryClasspathContainerInitializer", thread "Thread[Worker-4,5,main]" timed out waiting (5001ms) for thread "Thread[Worker-0,5,main]" to finish starting bundle "com.android.ide.eclipse.adt_23.0.4.1468518 [255]". To avoid deadlock, thread "Thread[Worker-4,5,main]" is proceeding but "com.android.ide.eclipse.adt.internal.project.LibraryClasspathContainerInitializer" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:plugins/com.android.ide.eclipse.adt_23.0.4.1468518.jar" by thread "Worker-0".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at org.eclipse.osgi.internal.loader.BundleLoader.loadClass(BundleLoader.java:340)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.loadClass(BundleHost.java:229)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.loadClass(AbstractBundle.java:1212)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.jdt.core.JavaCore.computeClasspathContainerInitializer(JavaCore.java:3175)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainerInitializer(JavaCore.java:3151)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:2824)
+	at org.eclipse.jdt.internal.core.JavaModelManager$11.run(JavaModelManager.java:2749)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:2787)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:1873)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3128)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2691)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2855)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:1960)
+	at org.eclipse.jdt.internal.core.ExternalFoldersManager.refreshReferences(ExternalFoldersManager.java:417)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2016)
+	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:470)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.handleEvent(NotificationManager.java:267)
+	at org.eclipse.core.internal.resources.Workspace.broadcastEvent(Workspace.java:390)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1698)
+	at com.android.ide.eclipse.adt.internal.project.BaseProjectHelper.markProject(BaseProjectHelper.java:220)
+	at com.android.ide.eclipse.adt.internal.project.BaseClasspathContainerInitializer$1.run(BaseClasspathContainerInitializer.java:60)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 42 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at org.eclipse.osgi.internal.loader.BundleLoader.loadClass(BundleLoader.java:340)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.loadClass(BundleHost.java:229)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.loadClass(AbstractBundle.java:1212)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.jdt.core.JavaCore.computeClasspathContainerInitializer(JavaCore.java:3175)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainerInitializer(JavaCore.java:3151)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:2824)
+	at org.eclipse.jdt.internal.core.JavaModelManager$11.run(JavaModelManager.java:2749)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:2787)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:1873)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3128)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2691)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2855)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:1960)
+	at org.eclipse.jdt.internal.core.ExternalFoldersManager.refreshReferences(ExternalFoldersManager.java:417)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2016)
+	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:470)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.handleEvent(NotificationManager.java:267)
+	at org.eclipse.core.internal.resources.Workspace.broadcastEvent(Workspace.java:390)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1698)
+	at com.android.ide.eclipse.adt.internal.project.BaseProjectHelper.markProject(BaseProjectHelper.java:220)
+	at com.android.ide.eclipse.adt.internal.project.BaseClasspathContainerInitializer$1.run(BaseClasspathContainerInitializer.java:60)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.osgi 2 0 2014-11-07 12:46:33.768
+!MESSAGE While loading class "com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$DeltaVisitor", thread "Thread[Worker-4,5,main]" timed out waiting (5000ms) for thread "Thread[Worker-0,5,main]" to finish starting bundle "com.android.ide.eclipse.adt_23.0.4.1468518 [255]". To avoid deadlock, thread "Thread[Worker-4,5,main]" is proceeding but "com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$DeltaVisitor" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: State change in progress for bundle "reference:file:plugins/com.android.ide.eclipse.adt_23.0.4.1468518.jar" by thread "Worker-0".
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$1.resourceChanged(GlobalProjectMonitor.java:535)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1712)
+	at com.android.ide.eclipse.adt.internal.project.BaseProjectHelper.markProject(BaseProjectHelper.java:220)
+	at com.android.ide.eclipse.adt.internal.project.BaseClasspathContainerInitializer$1.run(BaseClasspathContainerInitializer.java:60)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	... 24 more
+Root exception:
+org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.beginStateChange(AbstractBundle.java:1088)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:298)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+	at com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$1.resourceChanged(GlobalProjectMonitor.java:535)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1712)
+	at com.android.ide.eclipse.adt.internal.project.BaseProjectHelper.markProject(BaseProjectHelper.java:220)
+	at com.android.ide.eclipse.adt.internal.project.BaseClasspathContainerInitializer$1.run(BaseClasspathContainerInitializer.java:60)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:46:39.303
+!MESSAGE Failed to load properties file for project 'GooglePlayServicesActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:46:39.471
+!MESSAGE Failed to load properties file for project 'HomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:46:39.686
+!MESSAGE Failed to load properties file for project 'MobilePlayground'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:46:40.027
+!MESSAGE Failed to load properties file for project 'RealtimePlaygroundHomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:46:40.246
+!MESSAGE Failed to load properties file for project 'SplashActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:46:40.261
+!MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:46:43.151
+!MESSAGE Failed to load properties file for project 'GooglePlayServicesActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:46:43.153
+!MESSAGE Failed to load properties file for project 'HomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:46:43.159
+!MESSAGE Failed to load properties file for project 'MobilePlayground'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:46:43.163
+!MESSAGE Failed to load properties file for project 'RealtimePlaygroundHomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:46:43.165
+!MESSAGE Failed to load properties file for project 'SplashActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-07 12:46:43.166
+!MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:50:52.083
+!MESSAGE Failed to load properties file for project 'GooglePlayServicesActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:50:52.194
+!MESSAGE Failed to load properties file for project 'HomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:50:52.612
+!MESSAGE Failed to load properties file for project 'MobilePlayground'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:50:53.527
+!MESSAGE Failed to load properties file for project 'RealtimePlaygroundHomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:50:53.945
+!MESSAGE Failed to load properties file for project 'SplashActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:50:53.995
+!MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:50:54.908
+!MESSAGE Failed to load properties file for project 'SplashActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:50:54.910
+!MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:50:54.911
+!MESSAGE Failed to load properties file for project 'MobilePlayground'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:50:54.921
+!MESSAGE Failed to load properties file for project 'GooglePlayServicesActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:50:54.923
+!MESSAGE Failed to load properties file for project 'HomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:50:54.947
+!MESSAGE Failed to load properties file for project 'RealtimePlaygroundHomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:50:55.205
+!MESSAGE Failed to load properties file for project 'SplashActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:50:55.259
+!MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:50:55.278
+!MESSAGE Failed to load properties file for project 'MobilePlayground'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:50:55.581
+!MESSAGE Failed to load properties file for project 'GooglePlayServicesActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:50:55.584
+!MESSAGE Failed to load properties file for project 'HomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:50:56.147
+!MESSAGE Failed to load properties file for project 'RealtimePlaygroundHomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:51:02.711
+!MESSAGE Failed to load properties file for project 'SplashActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:51:02.711
+!MESSAGE Failed to load properties file for project 'SplashActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:51:02.712
+!MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:51:02.712
+!MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:51:02.713
+!MESSAGE Failed to load properties file for project 'MobilePlayground'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:51:02.724
+!MESSAGE Failed to load properties file for project 'MobilePlayground'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:51:03.695
+!MESSAGE Failed to load properties file for project 'GooglePlayServicesActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:51:03.696
+!MESSAGE Failed to load properties file for project 'GooglePlayServicesActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:51:04.012
+!MESSAGE Failed to load properties file for project 'HomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:51:04.013
+!MESSAGE Failed to load properties file for project 'HomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:51:05.592
+!MESSAGE Failed to load properties file for project 'RealtimePlaygroundHomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:51:05.592
+!MESSAGE Failed to load properties file for project 'RealtimePlaygroundHomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:52:28.237
+!MESSAGE Failed to load properties file for project 'SplashActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:52:28.398
+!MESSAGE Failed to load properties file for project 'SplashActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:52:28.399
+!MESSAGE Failed to load properties file for project 'SplashActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:52:28.400
+!MESSAGE Failed to load properties file for project 'SplashActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:52:28.587
+!MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:52:28.652
+!MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:52:28.747
+!MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:52:28.754
+!MESSAGE Failed to load properties file for project 'SplashScreenActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:52:28.883
+!MESSAGE Failed to load properties file for project 'MobilePlayground'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:52:29.050
+!MESSAGE Failed to load properties file for project 'MobilePlayground'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:52:29.055
+!MESSAGE Failed to load properties file for project 'MobilePlayground'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:52:29.056
+!MESSAGE Failed to load properties file for project 'MobilePlayground'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:52:30.428
+!MESSAGE Failed to load properties file for project 'GooglePlayServicesActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:52:30.511
+!MESSAGE Failed to load properties file for project 'GooglePlayServicesActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:52:30.513
+!MESSAGE Failed to load properties file for project 'GooglePlayServicesActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:52:30.515
+!MESSAGE Failed to load properties file for project 'GooglePlayServicesActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:52:34.815
+!MESSAGE Failed to load properties file for project 'HomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:52:34.821
+!MESSAGE Failed to load properties file for project 'HomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:52:34.826
+!MESSAGE Failed to load properties file for project 'HomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:52:34.848
+!MESSAGE Failed to load properties file for project 'HomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:52:36.477
+!MESSAGE Failed to load properties file for project 'RealtimePlaygroundHomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:52:36.481
+!MESSAGE Failed to load properties file for project 'RealtimePlaygroundHomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:52:36.500
+!MESSAGE Failed to load properties file for project 'RealtimePlaygroundHomeActivity'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2014-11-08 17:52:36.523
+!MESSAGE Failed to load properties file for project 'RealtimePlaygroundHomeActivity'
